@@ -1,0 +1,27 @@
+﻿# Fun Balance is Hard. Created by Znikii. 
+# Winters Suck! Balance adjusmenets for different lvls of local winter effect. Goal is to make winters more painful for food production & army.
+
+INJECT:winter_mild = {
+	local_monthly_food_modifier = -0.10
+	local_army_attrition = 1
+	max_attrition = 1
+}
+
+INJECT:winter_normal = {
+	local_monthly_food_modifier = -0.20
+	local_army_attrition = 1
+	max_attrition = 2
+	movement_cost = 0.1
+}
+
+REPLACE:winter_severe = {
+	game_data = {
+		category = location
+	}
+	movement_cost = 0.3
+	local_army_attrition = 4
+	local_navy_attrition = 10
+	max_attrition = 5
+	local_monthly_food_modifier = -2.0
+	local_construction_speed = -0.9
+}
